@@ -18,32 +18,71 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="container">
-      <header
-        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
-      >
-        <a
-          href="/"
-          class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
-        >
-          <svg
-            class="bi me-2"
-            width="40"
-            height="32"
-            role="img"
-            aria-label="Bootstrap"
-          >
-            <use xlink:href="#bootstrap"></use>
-          </svg>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="data:image/png;base64,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"
+            width="100"
+            height="30"
+            class="d-inline-block align-top"
+            alt="Harvard CS50 Codes"
+            loading="lazy"
+            style="filter: invert(0) grayscale(0%) brightness(100%)"
+          />
         </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Codes
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">0- Html & Css</a></li>
+                <li><a class="dropdown-item" href="#">1- Git</a></li>
+                <li><a class="dropdown-item" href="#">2- Python</a></li>
 
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Codes</a></li>
-        </ul>
-      </header>
-    </div>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">All the codes</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-dark" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
 
-    <h1>Welcome to my website</h1>
+    <h1 class="h1" style="text-align: center">Welcome to my website</h1>
   </body>
 </html>
